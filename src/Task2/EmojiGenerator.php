@@ -6,6 +6,13 @@ class EmojiGenerator
 {
     public function generate(): \Generator
     {
-        // @todo
+        foreach ($this->getThisTrash() as $emozzy) {
+            yield $emozzy;
+        }
+    }
+
+    private function getThisTrash() : array
+    {
+        return ['🚀', '🚃', '🚄', '🚅', '🚇'];
     }
 }
